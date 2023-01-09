@@ -26,22 +26,24 @@ Facciamo attenzione all’organizzazione del codice, suddividendolo in appositi 
         public $duration;
         public $year;
         public $plot;
+
+        public function __construct($_title, array $_genre, $_duration, $_year)
+        {
+            $this->title = $_title;
+            $this->genre = $_genre;
+            $this->duration = $_duration;
+            $this->year = $_year;
+        }
     }
 
-    $movie_1 = new Movie();
-    $movie_1->title = "Tre uomini e una gamba";
+    $genre_1 = ["Commedia"];
+    $movie_1 = new Movie("Tre uomini e una gamba", $genre_1, "98 min", "1997");
     $movie_1->original_language = "Italiano";
-    $movie_1->genre = "Commedia";
-    $movie_1->duration = "98 min";
-    $movie_1->year = "1997";
     $movie_1->plot = "I tre amici Aldo, Giovanni e Giacomo si mettono in viaggio verso il sud Italia per il matrimonio di uno di loro con la futura moglie. Durante il tragitto il terzetto affronta varie peripezie, tra le quali l'incontro con una ragazza di cui Giovanni si innamora e il trasporto di una gamba di legno al suocero.";
 
-    $movie_2 = new Movie();
-    $movie_2->title = "Top Gun: Maverick";
+    $genre_2 = ["Azione", "Drammatico"];
+    $movie_2 = new Movie("Top Gun: Maverick", $genre_2, "131 min", "2022");
     $movie_2->original_language = "Inglese";
-    $movie_2->genre = "Azione, Drammatico";
-    $movie_2->duration = "131 min";
-    $movie_2->year = "2022";
     $movie_2->plot = "Dopo più di trent’anni di servizio nella Marina, il Tenente Pete “Maverick” Mitchell è proprio dove vorrebbe essere: un pilota coraggioso che può spingersi oltre ogni limite, cercando di schivare l’avanzamento di carriera che metterebbe un freno alla sua libertà. Quando viene ri-chiamato ad addestrare i migliori allievi Top Gun per una missione specializzata che nessuno al mondo ha mai portato a compimento, Maverick incontra il Tenente Bradley Bradshaw, nome in codice “Rooster”: è il figlio di Nick , il compianto “Goose.” Alle prese con un futuro incerto e con i fantasmi del passato, Maverick deve confrontarsi con le sue paure più profonde, fino ad una missione che richiederà il sacrificio ultimo di quelli che sceglieranno di parteciparvi.";
 
     var_dump($movie_1);
